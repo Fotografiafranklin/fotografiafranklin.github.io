@@ -2,110 +2,152 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Fotografia Pre 15 Años | Franklin Fotografia Colombia</title>
+  <title>Fotografia Pre 15 con Caballos | La Fonda de Hollywood</title>
 
   <!-- SEO -->
-  <meta name="description" content="Fotografia profesional para pre 15 años en Colombia. Sesiones elegantes, caballos, exteriores y recuerdos inolvidables. Reserva hoy.">
-  <meta name="keywords" content="fotografia pre 15, fotos quinceañera colombia, fotografo 15 años, sesion pre quince">
-  <meta name="author" content="Franklin Fotografia">
+  <meta name="description" content="Sesion fotografica pre 15 con caballos en La Fonda de Hollywood, Combia Pereira. Experiencia elegante, fotos profesionales y recuerdos inolvidables.">
+  <meta name="keywords" content="fotografia pre 15, fotos con caballos, quinceañeras, Combia Pereira, sesion pre quince">
+  <meta name="author" content="Fotografia Franklin">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
       background: #0f0f0f;
-      color: #fff;
+      color: #f5f5f5;
+      line-height: 1.6;
     }
 
-    h1, h2, h3 {
+    h1, h2 {
       font-family: 'Playfair Display', serif;
-      font-weight: 700;
     }
 
-    a {
-      text-decoration: none;
+    section {
+      padding: 80px 10%;
     }
 
     /* HERO */
     .hero {
-      background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
-      url("https://lh3.googleusercontent.com/pw/AP1GczPh8gI-jXB6QVbVOvPNHKJpsjNZcKr_Od0Bu-17GICXeFqO7Gd-cwn7Xai2glJ__tepmO3BMN9I7vfNLweNBkV_faogE-orw8kG3zECWCiaheJ83xxqZfm0Rxi9GsWptOAGfbMvnj0-8DVmN3xHN7jE6g=w1200");
-      background-size: cover;
-      background-position: center;
       height: 100vh;
+      background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+      url("https://lh3.googleusercontent.com/pw/AP1GczOXwlew7r7ceUqpWppS2GCusGYlH7dB4rPSUChD9_aTZDbEdTMKAkBcm4wE2r_isxmv2c5A0u1cqZPHN68LHNPa03632OWp7nKfC0TCNz7gk-BA0NYCxo-oSMgDfYDA0DMI9RVFjFDtwZEuYu1mXk5OKA=w1600") center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 20px;
     }
 
     .hero h1 {
       font-size: 3rem;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
 
     .hero p {
       max-width: 700px;
       margin: auto;
       font-size: 1.1rem;
-      color: #ddd;
     }
 
     .btn {
       display: inline-block;
       margin-top: 30px;
-      padding: 14px 30px;
-      background: #c9a24d;
+      padding: 15px 40px;
+      background: #c9a14a;
       color: #000;
+      text-decoration: none;
+      border-radius: 40px;
       font-weight: 500;
-      border-radius: 30px;
       transition: 0.3s;
     }
 
     .btn:hover {
-      background: #e3bc63;
+      background: #e0bb66;
     }
 
-    /* SECCIONES */
-    section {
-      padding: 80px 20px;
-      max-width: 1100px;
-      margin: auto;
+    /* INFO */
+    .info {
+      background: #151515;
+      border-radius: 30px;
+      padding: 50px;
+      box-shadow: 0 20px 40px rgba(0,0,0,.6);
     }
 
-    .grid {
+    .info ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .info li {
+      margin-bottom: 12px;
+    }
+
+    /* GALERIA */
+    .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
+      gap: 25px;
+      margin-top: 40px;
     }
 
-    .card {
-      background: #1a1a1a;
-      padding: 30px;
+    .gallery img {
+      width: 100%;
       border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.5);
+      cursor: pointer;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      box-shadow: 0 10px 25px rgba(0,0,0,.6);
     }
 
-    /* MAPA */
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 20px 40px rgba(0,0,0,.8);
+    }
+
+    /* MODAL */
+    #modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,.9);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+
+    #modal img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 20px;
+    }
+
     iframe {
       width: 100%;
       height: 400px;
-      border-radius: 20px;
       border: none;
+      border-radius: 30px;
     }
 
-    /* FOOTER */
     footer {
       text-align: center;
       padding: 40px;
-      background: #000;
-      color: #aaa;
       font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    @media (max-width: 768px) {
+      section {
+        padding: 60px 7%;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
     }
   </style>
 </head>
@@ -115,48 +157,78 @@
   <!-- HERO -->
   <div class="hero">
     <div>
-      <h1>Fotografia Pre 15 Años</h1>
-      <p>Sesiones elegantes, recuerdos eternos y experiencias unicas para quinceañeras en Colombia.</p>
-      <a class="btn" href="https://wa.me/573105121313" target="_blank">Reservar Sesion</a>
+      <h1>Fotografia Pre 15 con Caballos</h1>
+      <p>Una experiencia elegante y unica para quinceañeras en La Fonda de Hollywood.</p>
+      <a class="btn" href="https://wa.me/573137900448?text=Hola,%20quiero%20informacion%20sobre%20la%20sesion%20pre%2015%20con%20caballos" target="_blank">
+        Reservar Sesion
+      </a>
     </div>
   </div>
 
-  <!-- EXPERIENCIA -->
+  <!-- INFO -->
   <section>
-    <h2>Una experiencia unica para su pre-15</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Estilo Elegante</h3>
-        <p>Sesiones con direccion profesional, vestuario y escenarios exclusivos.</p>
-      </div>
-      <div class="card">
-        <h3>Recuerdos para Siempre</h3>
-        <p>Fotografias que cuentan una historia y emocionan a toda la familia.</p>
-      </div>
-      <div class="card">
-        <h3>Atencion Personalizada</h3>
-        <p>Acompañamiento completo desde la idea hasta la entrega final.</p>
-      </div>
+    <div class="info">
+      <h2>La Experiencia</h2>
+      <ul>
+        <li>📍 Ubicacion: Combia, Pereira, Risaralda</li>
+        <li>⏱ Duracion: 1 a 2 horas</li>
+        <li>🐎 Alquiler del caballo: $180.000 a $250.000 COP</li>
+        <li>👨‍👩‍👧 Pueden asistir familiares principales</li>
+        <li>📸 Sesion guiada y profesional</li>
+      </ul>
     </div>
   </section>
 
-  <!-- MAPA COLOMBIA -->
+  <!-- GALERIA -->
+  <section>
+    <h2>Galeria Pre 15</h2>
+    <p>Momentos reales, emociones autenticas y recuerdos eternos.</p>
+
+    <div class="gallery">
+      <img src="https://lh3.googleusercontent.com/pw/AP1GczOXwlew7r7ceUqpWppS2GCusGYlH7dB4rPSUChD9_aTZDbEdTMKAkBcm4wE2r_isxmv2c5A0u1cqZPHN68LHNPa03632OWp7nKfC0TCNz7gk-BA0NYCxo-oSMgDfYDA0DMI9RVFjFDtwZEuYu1mXk5OKA=w800" onclick="openModal(this.src)">
+      <img src="https://lh3.googleusercontent.com/pw/AP1GczMcKsIx4pSI5mrEBj87aKR0QN8F9TDU5X--PH5qq3Q84KCzlNShVhDQAhoZmhRNex1fs6KwlFWJyRBySnC-viRM909JibNHIE1yDONuU1L2-THsUCJmKu6NHoE42YCukfwtueVDwnkyao_1h_Vm_ljNkQ=w800" onclick="openModal(this.src)">
+      <img src="https://lh3.googleusercontent.com/pw/AP1GczPh8gI-jXB6QVbVOvPNHKJpsjNZcKr_Od0Bu-17GICXeFqO7Gd-cwn7Xai2glJ__tepmO3BMN9I7vfNLweNBkV_faogE-orw8kG3zECWCiaheJ83xxqZfm0Rxi9GsWptOAGfbMvnj0-8DVmN3xHN7jE6g=w800" onclick="openModal(this.src)">
+    </div>
+
+    <div style="text-align:center; margin-top:40px;">
+      <a href="https://photos.app.goo.gl/D3Bo6cittVSHuuSr9" target="_blank" class="btn">
+        Ver galeria completa
+      </a>
+    </div>
+  </section>
+
+  <!-- MAPA -->
   <section>
     <h2>Ubicacion</h2>
-    <p>Atendemos sesiones en diferentes ciudades de Colombia.</p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25450832.445736136!2d-77.653612!3d4.570868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3c8c8b8c8b8c8b%3A0x0!2sColombia!5e0!3m2!1ses!2sco!4v1700000000000"></iframe>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.097253880846!2d-75.75174318576483!3d4.826638297827671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e387c024c7f9641%3A0xfb1e06cae7b46299!2sLa%20Fonda%20de%20Hollywood!5e0!3m2!1ses!2sco!4v1704423651234"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
   </section>
 
-  <!-- CTA FINAL -->
-  <section style="text-align:center;">
-    <h2>Reserva hoy la sesion de su pre-15</h2>
-    <p>Cupos limitados por temporada.</p>
-    <a class="btn" href="https://wa.me/573105121313" target="_blank">Hablar por WhatsApp</a>
-  </section>
-
+  <!-- FOOTER -->
   <footer>
-    © 2026 Franklin Fotografia | Pre 15 Años Colombia
+    © Fotografia Franklin | La Fonda de Hollywood<br>
+    Reservas WhatsApp: 313 7900448<br>
+    Gracias por ver el video
   </footer>
+
+  <!-- MODAL -->
+  <div id="modal" onclick="closeModal()">
+    <img id="modal-img">
+  </div>
+
+  <script>
+    function openModal(src) {
+      document.getElementById("modal").style.display = "flex";
+      document.getElementById("modal-img").src = src;
+    }
+
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+  </script>
 
 </body>
 </html>
